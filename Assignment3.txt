@@ -1,0 +1,50 @@
+package project;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Scanner;
+
+public class Employee {
+
+	int emp_id;
+	String emp_name;
+	double basic_salary;
+	Scanner sc;
+	Employee()
+	{
+		sc=new Scanner(System.in);
+	}
+	Employee(int id,String name,double salary)
+	{
+		emp_id=id;
+		emp_name=name;
+		basic_salary=salary;
+		
+	}
+	void display()
+	{
+		double pf=basic_salary*12/100;
+		double hra=basic_salary*50/100;
+		double total_salary=basic_salary+pf+hra;
+		System.out.println ("Employee Id= "+emp_id);
+		System.out.println ("Emplyee Name= "+emp_name);
+		System.out.println ("Gross Salary= "+basic_salary);
+	}
+	public void input()
+	{
+		System.out.println ("Enter Employee id");
+		emp_id=sc.nextInt();
+		System.out.println ("Enter Employee Name");
+		emp_name=sc.next();
+		System.out.println ("Enter Basic Salary");
+		basic_salary=sc.nextDouble();
+	}
+
+	public static void main(String args[]) throws IOException
+	{
+		
+	
+	}
+}	
+
+
+
